@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memories Timeline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #4caf50;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-event {
+            position: relative;
+            margin: 20px 0;
+            padding-left: 60px;
+            width: 50%;
+        }
+        .timeline-event:nth-child(even) {
+            left: 50%;
+            transform: translateX(-100%);
+            padding-left: 0;
+            padding-right: 60px;
+        }
+        .timeline-event .marker {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4caf50;
+            border: 3px solid white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-event .content {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+        .timeline-event .content h3 {
+            margin: 0 0 5px;
+        }
+        .timeline-event .content a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+        .timeline-event .content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Memories Timeline</h1>
+    </header>
+    <div class="timeline">
+        <div class="timeline-event">
+            <span class="marker"></span>
+            <div class="content">
+                <h3>Memory 1: Proposal</h3>
+                <p>Date <strong>October 18 , 2024</strong></p>
+                <a href="https://rahulranjanz.github.io/final/f.html" target="_blank">View the Event</a>
+            </div>
+        </div>
+        <div class="timeline-event">
+            <span class="marker"></span>
+            <div class="content">
+                <h3>Memory 2:Tine's First Birthday</h3>
+                <p>Date <strong>13th December 2024</strong></p>
+                <a href="https://rahulranjanz.github.io/Birthday/Birthday.html" target="_blank">View the Event</a>
+            </div>
+        </div>
+        <div class="timeline-event">
+            <span class="marker"></span>
+            <div class="content">
+                <h3>Memory 3: Our First Baby.</h3>
+                <p>Location: <strong>Sunshine Beach</strong></p>
+                <a href="https://rahulranjanz.github.io/Kid/kid.html" target="_blank">View the Adventure</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
